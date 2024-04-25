@@ -1,0 +1,113 @@
+@import '../../../scss/abstracts/mixins';
+
+.header_items {
+  @include flex(space-between, center);
+  width: 95%;
+  height: 80px;
+  padding: 0 30px;
+  border-radius: 13px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: var(--background-color-navbar);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.2rem;
+  transition: 1s;
+
+  .logo_container{
+    justify-self: start;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+
+    .logo{
+      width: 100px;
+      height: 80px;
+    }
+  }
+
+  .container_menu{
+    @include flex(space-between, center);
+  
+    .responsive_container{
+      display: none;
+      width: 26px;
+      height: 26px;
+  
+      .responsive_icon{
+        color: var(--text-secondary-color);
+        width: 26px;
+        height: 26px;
+        transition: 1s;
+      }
+    }
+  
+    .nav_container{
+      display: flex;
+  
+      .nav_menu{
+        @include grid(6, auto, 10px);
+        align-items: center;
+        text-align: center;
+        justify-content: end;
+  
+        .nav_link{
+          color: var(--text-navbar-color);
+          padding: 0.7rem 1rem;
+          transition: 1s;
+        }
+  
+        .nav_link:hover{
+          background-color: var(--first-primary-color);
+          border-radius: 4px;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  
+    @include responsive(770px){
+      .responsive_container{
+        display: block;
+        margin-right: 1rem;
+      }
+  
+      .nav_container{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        z-index: -1;
+        transition: all 0.4s ease-in-out;
+  
+        .nav_menu{
+          @include flexible(column, wrap, flex-start, stretch);
+          width: 100%;
+          height: auto;
+          border-radius: 13px;
+          background-color: rgba(255, 255, 255, .25);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+          backdrop-filter: blur(4px);
+          padding: 80px 0 30px 0;
+          margin: 0;
+  
+          .nav_link{
+            display: block;
+            widows: 100%;
+            padding: 2rem 0;
+            color: var(--text-primary-color);
+          }
+  
+          .nav_link:hover{
+           background: rgba(255, 255, 255, 0.25);
+           backdrop-filter: blur(20px);
+          }
+        }
+      }
+      
+      .nav_container.active{
+        left: 0%;
+      }
+    }
+  }
+}

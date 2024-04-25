@@ -1,5 +1,6 @@
 import { User } from "../../db.js"; 
 import { encryptPassword } from "../../middlewares/passwordCrypt.js";
+import { createToken } from "../../middlewares/token.js";
 
 
 export const createUserController = async ({ firstName, lastName, email, password }) => {
@@ -15,6 +16,10 @@ export const createUserController = async ({ firstName, lastName, email, passwor
     email, 
     password: passwordHashed
   })
+  const token = createToken(newUser)
 
-  return newUser
+  return {
+    newUser,
+    token
+  }
 }

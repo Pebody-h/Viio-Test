@@ -1,0 +1,54 @@
+@import '../../../scss/abstracts/mixins';
+
+.footer_items {
+  @include flexible(column, wrap, center, center);
+  background-color: var(--background-color);
+  width: 100%;
+  height: max-content;
+  padding: 20px 5%;
+  transition: 1s;
+  color: var(--text-navbar-color);
+
+  .footer_nav_container {
+
+    .footer_nav_menu {
+      @include flex(space-between, center);
+      flex-direction: row;
+      margin-bottom: .5rem;
+
+      .footer_nav_link{
+        widows: 100%;
+        padding: 0 1rem;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--text-navbar-color);
+      }
+
+      .footer_nav_link:hover{
+        color: var(--text-hover);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    .footer_copyright{
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    @include responsive(450px) {
+      .footer_nav_menu {
+        flex-direction: column;
+
+        .footer_nav_link{
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+
+      .footer_copyright{
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../scss/abstracts/mixins';
+
+.home_items {
+  @include flexible(column, wrap, center, center);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 0 16%;
+  background-color: var(--background-color-secondary);
+  transition: 1s;
+
+  .home_tittle {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    margin-bottom: 2rem;
+  }
+
+  .home_description {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary-color);
+  }
+
+  @include responsive(450px) {
+    .home_tittle {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .home_description {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

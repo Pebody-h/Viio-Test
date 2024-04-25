@@ -1,0 +1,25 @@
+@import '../../scss/abstracts/mixins';
+
+.products_items{
+  @include grid(3, 1fr, 1px);
+  padding-top: 10rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--background-color-secondary);
+}
+
+@include responsive(880px){
+  .products_items {
+    @include grid(2, 1fr, 0px);
+  }
+}
+
+@include responsive(630px){
+  .products_items {
+    @include grid(1, 1fr, 0px);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}

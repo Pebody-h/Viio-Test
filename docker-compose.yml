@@ -19,3 +19,10 @@ services:
       - 3001:3001
     depends_on:
       - db
+
+  # client:
+  #   build: ./client
+  #   volumes:
+  #     - ./client:/usr/src/app
+  #   ports:
+  #     - 3000:3000

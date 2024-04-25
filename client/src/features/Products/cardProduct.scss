@@ -1,0 +1,39 @@
+@import '../../scss/abstracts/mixins';
+
+.card{
+  @include flexible(column, wrap, center, center);
+  text-align: center;
+  max-width: 260px;
+  height: 400px;
+  padding: 1rem 1rem;
+  background-color: var(--background-color);
+  transition: 1s;
+  border-radius: 14px;
+  box-shadow: var(--box-shadow-forms);
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .img_base{
+    width: 220px;
+    height: 220px;
+    border-radius: 14px;
+  }
+
+  .big_text{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-navbar-color);
+  }
+
+  .container_content_card{
+    width: 100%;
+    text-align: start;
+    padding: 0 .5rem;
+
+    .content_card{
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-navbar-color);
+    }
+  }
+}

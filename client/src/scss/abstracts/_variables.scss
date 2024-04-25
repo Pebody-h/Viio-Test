@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  // fonts
+  --font-family-default: "Poppins", sans-serif;
+
+  // Colors Light Mode
+  --first-primary-color: #007aff;
+  --background-color: #a5d1ff;
+  --background-color-secondary: #fefbf7;
+  --background-color-terciary: #eaf4ff;
+  --background-color-navbar: #a5d1ff;
+  --background-theme: #007aff;
+  --hover-theme: #fefbf7;
+  --button-color: red;
+  --button-hover: red;
+  --text-hover: #007aff;
+  --text-navbar-color: #fefbf7;
+  --text-primary-color: #000;
+  --text-secondary-color: #fefbf7;
+
+  //box shaow
+  --box-shadow-forms: 0 8px 16px rgb(213, 213, 223);
+}
+
+body.dark {
+  // Colors Dark Mode
+  --background-color: #013c4f;
+  --background-color-secondary: #001e27;
+  --background-color-terciary: #013c4f;
+  --background-color-navbar: #013c4f;
+  --background-theme: #fefbf7;
+  --hover-theme: #00607b;
+  --text-primary-color: #fefbf7;
+  --text-secondary-color: #000;
+
+  //box shaow
+  --box-shadow-forms: 0 8px 16px rgb(21, 22, 24);
+}
